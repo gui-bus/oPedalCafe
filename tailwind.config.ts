@@ -74,6 +74,7 @@ module.exports = {
       backgroundImage: {
         login: "url('/login.webp')",
         register: "url('/register.webp')",
+        dashboard: "url('/dashboard.webp')",
       },
     },
   },
