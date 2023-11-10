@@ -13,6 +13,7 @@ type AuthContextData = {
   isAuthenticated: boolean;
   signIn: (credentials: SignInProps) => Promise<void>;
   signOut: () => void;
+  Register: (credentials: RegisterProps) => Promise<void>;
 };
 
 type UserProps = {
@@ -22,6 +23,12 @@ type UserProps = {
 };
 
 type SignInProps = {
+  email: string;
+  password: string;
+};
+
+type RegisterProps = {
+  name: string;
   email: string;
   password: string;
 };
@@ -65,8 +72,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       const { id, name, token } = response.data;
 
-      console.log(response.data);
-
       setCookie(undefined, "@nextauth.token", token, {
         maxAge: 60 * 60 * 24 * 30,
         path: "/",
@@ -78,7 +83,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         email,
       });
 
-      const aaa = (api.defaults.headers["Authorization"] = `Bearer ${token}`);
+      api.defaults.headers["Authorization"] = `Bearer ${token}`;
 
       router.push("/dashboard");
 
@@ -93,12 +98,35 @@ export function AuthProvider({ children }: AuthProviderProps) {
           fontSize: "12px",
         },
       });
-      console.log(err);
+    }
+  }
+
+  async function Register({ name, email, password }: RegisterProps) {
+    try {
+      const response = await api.post("/users", {
+        name,
+        email,
+        password,
+      });
+
+      router.push("/login");
+
+      toast.success("Usuário cadastrado com sucesso! \n Faça seu login.", {
+        style: {
+          fontSize: "12px",
+        },
+      });
+    } catch (err) {
+      toast.error("Erro ao cadastrar este usuário!", {
+        style: {
+          fontSize: "12px",
+        },
+      });
     }
   }
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, signIn, signOut, Register }}>
       {children}
     </AuthContext.Provider>
   );
