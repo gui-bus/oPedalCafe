@@ -111,7 +111,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       router.push("/login");
 
-      toast.success("Usuário cadastrado com sucesso! \n Faça seu login.", {
+      toast.success("Usuário cadastrado com sucesso!", {
         style: {
           fontSize: "12px",
         },
