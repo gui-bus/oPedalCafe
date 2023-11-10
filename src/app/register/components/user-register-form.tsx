@@ -32,7 +32,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               Nome
             </Label>
             <Input
-              id="name"
+              id="nameRegister"
               placeholder="Digite seu nome..."
               type="text"
               autoCapitalize="none"
@@ -46,7 +46,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               Email
             </Label>
             <Input
-              id="email"
+              id="emailRegister"
               placeholder="Digite seu email..."
               type="email"
               autoCapitalize="none"
@@ -60,7 +60,7 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
               Senha
             </Label>
             <Input
-              id="password"
+              id="passwordRegister"
               placeholder="Digite sua senha..."
               type="password"
               autoCapitalize="none"
