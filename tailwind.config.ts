@@ -17,6 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        pedalOrange: "#F76707",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,6 +70,10 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        login: "url('/login.webp')",
+        register: "url('/register.webp')",
       },
     },
   },
