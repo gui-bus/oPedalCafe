@@ -23,18 +23,10 @@ export default function RegisterPage() {
                 height={0}
                 width={0}
                 className="mx-auto h-auto w-72 object-cover"
+                priority
               />
             </div>
             <UserRegisterForm />
-            <p className="px-8 text-center text-sm text-muted-foreground">
-              Já possui uma conta?{" "}
-              <Link
-                href="/login"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Faça login
-              </Link>
-            </p>
           </div>
         </div>
         <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">

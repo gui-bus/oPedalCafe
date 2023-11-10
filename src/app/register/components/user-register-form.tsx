@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LuUserPlus2 } from "react-icons/lu";
 import toast from "react-hot-toast";
+import { parseCookies } from "nookies";
+import { useRouter } from "next/navigation";
 
 import { AuthContext } from "../../../contexts/AuthContext";
 
@@ -17,11 +19,20 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserRegisterForm({ className, ...props }: UserAuthFormProps) {
   const { Register } = useContext(AuthContext);
+  const router = useRouter();
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  React.useEffect(() => {
+    const cookies = parseCookies(undefined);
+
+    if (!cookies["@nextauth.token"]) {
+      router.push("/");
+    }
+  }, []);
 
   async function handleRegister(event: FormEvent) {
     event.preventDefault();
