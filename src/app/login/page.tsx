@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 import { UserAuthForm } from "./components/user-auth-form";
 
@@ -28,18 +27,10 @@ export default function AuthenticationPage() {
                 height={0}
                 width={0}
                 className="mx-auto h-auto w-72 object-cover"
+                priority
               />
             </div>
             <UserAuthForm />
-            <p className="px-8 text-center text-sm text-muted-foreground">
-              Ainda não possui cadastro?{" "}
-              <Link
-                href="/register"
-                className="underline underline-offset-4 hover:text-primary"
-              >
-                Crie sua conta
-              </Link>
-            </p>
           </div>
         </div>
       </div>

@@ -13,15 +13,26 @@ import { LuLogIn } from "react-icons/lu";
 
 import { AuthContext } from "../../../contexts/AuthContext";
 import toast from "react-hot-toast";
+import { parseCookies } from "nookies";
+import { useRouter } from "next/navigation";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const { signIn } = useContext(AuthContext);
+  const router = useRouter();
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  React.useEffect(() => {
+    const cookies = parseCookies(undefined);
+
+    if (cookies["@nextauth.token"]) {
+      router.push("/dashboard");
+    }
+  }, []);
 
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
