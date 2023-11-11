@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { setupAPIClient } from "../../../services/api";
 
-const DashboardContent = () => {
+const NewCategoryPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [name, setName] = useState("");
   const router = useRouter();
@@ -121,4 +121,4 @@ const DashboardContent = () => {
   );
 };
 
-export default DashboardContent;
+export default NewCategoryPage;
