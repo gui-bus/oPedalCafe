@@ -80,11 +80,11 @@ const NewCategoryPage = () => {
           >
             <div className="grid gap-2">
               <div className="grid gap-1">
-                <Label className="sr-only" htmlFor="email">
+                <Label className="sr-only" htmlFor="category">
                   Categoria
                 </Label>
                 <Input
-                  id="emailLogin"
+                  id="category"
                   placeholder="Digite o nome da categoria..."
                   type="text"
                   autoCapitalize="none"
