@@ -75,6 +75,7 @@ module.exports = {
         login: "url('/login.webp')",
         register: "url('/register.webp')",
         dashboard: "url('/dashboard.webp')",
+        newCategory: "url('/new_category.webp')",
       },
     },
   },
