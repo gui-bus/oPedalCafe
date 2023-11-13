@@ -180,7 +180,7 @@ const NewProductContent = () => {
                   <span className={`${avatarUrl ? "absolute" : "flex"}`}>
                     <LuImagePlus
                       size={30}
-                      className={`z-[99] cursor-pointer transition-all duration-300 group-hover:scale-105 ${
+                      className={`z-50 cursor-pointer transition-all duration-300 group-hover:scale-105 ${
                         avatarUrl ? "text-white" : "text-muted-foreground"
                       }`}
                     />
