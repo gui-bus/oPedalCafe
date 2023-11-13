@@ -77,6 +77,7 @@ module.exports = {
         dashboard: "url('/dashboard.webp')",
         newCategory: "url('/new_category.webp')",
         newProduct: "url('/new_product.webp')",
+        menu: "url('/menu.webp')",
       },
     },
   },
