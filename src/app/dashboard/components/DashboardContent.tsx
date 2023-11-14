@@ -196,7 +196,7 @@ const DashboardContent = () => {
                 <span className="text-center text-sm text-muted-foreground">No momento não há nenhum pedido a ser preparado!</span>
               </div>
             ) : (
-              <ScrollArea className="h-fit max-h-56 w-full max-w-md rounded-lg border border-input p-4">
+              <ScrollArea className="h-56 w-full max-w-md rounded-lg border border-input p-4">
                 {orders.map((order) => (
                   <Dialog key={order.id}>
                     <DialogTrigger
