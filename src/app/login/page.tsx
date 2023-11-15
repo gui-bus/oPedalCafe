@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import { UserAuthForm } from "./components/user-auth-form";
+import LoginImage from '../../assets/Login.png'
 
 export const metadata: Metadata = {
   title: "O Pedal Café - Login",
@@ -15,7 +16,7 @@ export default function AuthenticationPage() {
         <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
           {/* <div className="absolute inset-0 bg-login bg-cover bg-center" /> */}
           <Image
-            src="/login.png"
+            src={LoginImage}
             alt="Login cover"
             sizes="100vw"
             height={0}
