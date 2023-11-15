@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import RegisterImage from '../../assets/Register.png'
 
 import { UserRegisterForm } from "./components/user-register-form";
 
@@ -29,8 +30,16 @@ export default function RegisterPage() {
             <UserRegisterForm />
           </div>
         </div>
-        <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="bg-register absolute inset-0 bg-cover bg-center" />
+        <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
+        <Image
+            src={RegisterImage}
+            alt="Register cover"
+            sizes="100vw"
+            height={0}
+            width={0}
+            className="w-full h-screen object-cover"
+            priority
+          />
         </div>
       </div>
     </>

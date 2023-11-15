@@ -11,6 +11,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { setupAPIClient } from "../../../../services/api";
+import Image from "next/image";
+import NewCategoryImage from "../../../../assets/New_Category.png";
 
 const NewCategoryContent = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -61,8 +63,16 @@ const NewCategoryContent = () => {
         <Header />
       </div>
       <div className="container relative flex h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="absolute inset-0 bg-newCategory bg-cover bg-center" />
+        <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
+          <Image
+            src={NewCategoryImage}
+            alt="New Category cover"
+            sizes="100vw"
+            height={0}
+            width={0}
+            className="h-screen w-full object-cover"
+            priority
+          />
         </div>
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-2">

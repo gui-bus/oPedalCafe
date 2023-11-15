@@ -11,7 +11,7 @@ import { setupAPIClient } from "../../../services/api";
 import Image from "next/image";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { eventNames } from "process";
+import MenuImage from '../../../assets/Menu.png'
 
 interface CategoryProps {
   id: string;
@@ -133,8 +133,16 @@ const MenuContent = () => {
         <Header />
       </div>
       <div className="container relative flex h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="bg-menu absolute inset-0 bg-cover bg-center" />
+        <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
+        <Image
+            src={MenuImage}
+            alt="Menu cover"
+            sizes="100vw"
+            height={0}
+            width={0}
+            className="w-full h-screen object-cover"
+            priority
+          />
         </div>
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-2">

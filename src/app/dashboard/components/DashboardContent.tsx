@@ -26,6 +26,8 @@ import { format } from "date-fns";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
+import RegisterImage from '../../../assets/Register.png'
+
 interface OrdersProps {
   id: string;
   table: string | number;
@@ -159,8 +161,16 @@ const DashboardContent = () => {
         <Header />
       </div>
       <main className="container relative flex h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="absolute inset-0 bg-dashboard bg-cover bg-center" />
+        <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
+        <Image
+            src={RegisterImage}
+            alt="Register cover"
+            sizes="100vw"
+            height={0}
+            width={0}
+            className="w-full h-screen object-cover"
+            priority
+          />
         </div>
         <div className="lg:p-8">
           <div className="mx-auto mb-5 flex w-full max-w-md flex-col justify-center space-y-2">
