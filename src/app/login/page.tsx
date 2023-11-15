@@ -15,7 +15,7 @@ export default function AuthenticationPage() {
         <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
           {/* <div className="absolute inset-0 bg-login bg-cover bg-center" /> */}
           <Image
-            src="/login.webp"
+            src="/login.png"
             alt="Login cover"
             sizes="100vw"
             height={0}
