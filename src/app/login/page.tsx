@@ -3,19 +3,26 @@ import Image from "next/image";
 
 import { UserAuthForm } from "./components/user-auth-form";
 
-
 export const metadata: Metadata = {
   title: "O Pedal Café - Login",
   description: "Página de Login do Pedal Café",
 };
 
 export default function AuthenticationPage() {
-
   return (
     <>
       <div className="container relative flex h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-        <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-          <div className="bg-login absolute inset-0 bg-cover bg-center" />
+        <div className="relative hidden h-full flex-col bg-muted text-white dark:border-r lg:flex">
+          {/* <div className="absolute inset-0 bg-login bg-cover bg-center" /> */}
+          <Image
+            src="/login.webp"
+            alt="Login cover"
+            sizes="100vw"
+            height={0}
+            width={0}
+            className="w-full h-screen object-cover"
+            priority
+          />
         </div>
         <div className="lg:p-8">
           <div className="mx-auto flex w-full max-w-md flex-col justify-center space-y-6">
