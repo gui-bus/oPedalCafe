@@ -1,5 +1,5 @@
 
-# O Pedal Café :shopping_cart:
+# O Pedal Café :biking_man:
 <div align="center">
   <img src="https://github.com/gui-bus/oPedalCafe/blob/main/github/desktop_login.png?raw=true" alt="Desktop Homepage" width="700" /> 
 </div>
